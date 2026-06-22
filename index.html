@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — TomVideoDownloader</title>
+<meta name="description" content="Privacy policy for the TomVideoDownloader browser extension. All processing is local; no personal data is collected or transmitted.">
+<style>
+  :root { --fg:#1c1e21; --muted:#606770; --accent:#2563eb; --line:#e4e6eb; --bg:#ffffff; }
+  * { box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+         color:var(--fg); background:var(--bg); line-height:1.65; margin:0; }
+  .wrap { max-width:760px; margin:0 auto; padding:48px 22px 80px; }
+  h1 { font-size:1.9rem; margin:0 0 4px; }
+  .updated { color:var(--muted); font-size:.92rem; margin-bottom:28px; }
+  h2 { font-size:1.2rem; margin:36px 0 10px; padding-top:10px; border-top:1px solid var(--line); }
+  h2:first-of-type { border-top:none; }
+  p, li { font-size:1rem; }
+  .lead { background:#f0f6ff; border:1px solid #cfe0ff; border-radius:10px; padding:16px 18px; font-weight:600; }
+  table { border-collapse:collapse; width:100%; margin:14px 0; font-size:.95rem; }
+  th, td { border:1px solid var(--line); padding:9px 11px; text-align:left; vertical-align:top; }
+  th { background:#f5f6f7; }
+  code { background:#f0f0f2; padding:1px 5px; border-radius:4px; font-size:.9em; }
+  a { color:var(--accent); }
+  footer { margin-top:40px; color:var(--muted); font-size:.88rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Privacy Policy — TomVideoDownloader</h1>
+  <div class="updated">Last updated: 2026-06-22</div>
+
+  <p>TomVideoDownloader (&ldquo;the Extension&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;) is a browser
+  extension that detects videos on web pages you choose to visit and lets you download them
+  to your own computer. This policy explains what the Extension does and does not do with
+  your information.</p>
+
+  <p class="lead">The Extension does not collect, transmit, sell, or share any personal
+  information. Everything it does happens locally, inside your own browser.</p>
+
+  <h2>1. What we do NOT do</h2>
+  <ul>
+    <li>We do <strong>not</strong> collect personal information (name, email, address, phone number, etc.).</li>
+    <li>We do <strong>not</strong> run analytics, telemetry, tracking pixels, or fingerprinting.</li>
+    <li>We do <strong>not</strong> operate servers that receive your browsing history, the pages you visit, the videos you detect, or the videos you download.</li>
+    <li>We do <strong>not</strong> sell, rent, or share any data with third parties.</li>
+    <li>We do <strong>not</strong> require an account, sign-in, or registration.</li>
+  </ul>
+
+  <h2>2. What information the Extension handles, and why</h2>
+  <p>All items below are processed <strong>locally on your device</strong> and are
+  <strong>never sent to us</strong>.</p>
+  <table>
+    <thead><tr><th>Data the Extension touches</th><th>Why it needs it</th><th>Where it goes</th></tr></thead>
+    <tbody>
+      <tr><td>Content of the page you are on</td><td>Detect playable videos and download links</td><td>Stays in your browser</td></tr>
+      <tr><td>Video / media URLs on the page</td><td>Show available formats; fetch files when you click Download</td><td>Fetched directly from the host site by your browser</td></tr>
+      <tr><td>Your settings (quality, folders, language, etc.)</td><td>Remember preferences between sessions</td><td><code>chrome.storage.local</code> on your device</td></tr>
+      <tr><td>Download history in the Library</td><td>Let you review and re-open past downloads</td><td>Local storage; clearable anytime</td></tr>
+      <tr><td>Site cookies (when needed)</td><td>Some hosts require an authenticated session for a download you requested</td><td>Used only for that download to the host site; never sent to us</td></tr>
+    </tbody>
+  </table>
+
+  <h2>3. Permissions and how they are used</h2>
+  <p>Chrome requires declared capabilities. Each permission exists for a <strong>single, narrow</strong> product reason:</p>
+  <table>
+    <thead><tr><th>Permission</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td><code>tabs</code> / <code>webNavigation</code></td><td>Know which page is active so detection runs on the page you are viewing.</td></tr>
+      <tr><td><code>scripting</code> + host access</td><td>Run video-detection code only on supported video sites you navigate to (see &sect;4).</td></tr>
+      <tr><td><code>downloads</code> / <code>downloads.open</code></td><td>Save files you requested and optionally open them.</td></tr>
+      <tr><td><code>storage</code></td><td>Persist settings, queue, and Library locally.</td></tr>
+      <tr><td><code>webRequest</code> / <code>declarativeNetRequest</code> / <code>declarativeNetRequestWithHostAccess</code></td><td>Identify media streams and reduce intrusive ads/pop-ups on supported pages so real media can be found. No request data is logged or transmitted.</td></tr>
+      <tr><td><code>notifications</code></td><td>Notify when a queued download completes or fails.</td></tr>
+      <tr><td><code>contextMenus</code></td><td>Add a right-click &ldquo;Download with TVD&rdquo; entry.</td></tr>
+      <tr><td><code>sidePanel</code></td><td>Show the Extension UI in the browser side panel.</td></tr>
+      <tr><td><code>offscreen</code></td><td>Perform local media processing (e.g. merge audio/video) via an offscreen document.</td></tr>
+      <tr><td><code>incognito</code> (spanning)</td><td>Offer the same features when you enable the Extension in incognito.</td></tr>
+    </tbody>
+  </table>
+  <p>The Extension requests no permission that is not used by a feature described above.</p>
+
+  <h2>4. Host access (mainstream build)</h2>
+  <p>The <strong>Chrome Web Store build</strong> declares host access only for <strong>mainstream video and
+  social platforms</strong> (for example Vimeo, Dailymotion, Twitch, Bilibili, TED, Reddit,
+  Twitter/X, TikTok, and similar public video sites). The detection script runs <strong>only</strong>
+  on pages that match those declared patterns &mdash; not on arbitrary sites.</p>
+  <p>A separate <strong>full build</strong> distributed outside the Chrome Web Store may offer broader
+  site support under different manifest permissions. That build is not described by this
+  policy URL.</p>
+
+  <h2>5. Data storage and retention</h2>
+  <ul>
+    <li>Settings, queue entries, and Library items remain on your device until you clear them (via in-extension controls, by uninstalling, or by clearing browser data).</li>
+    <li>The Extension keeps <strong>no server-side copy</strong> because it operates no backend.</li>
+  </ul>
+
+  <h2>6. Downloaded files</h2>
+  <p>Files you download are saved by your browser to a location you choose. The Extension does
+  not upload, copy, or transmit them elsewhere.</p>
+
+  <h2>7. Third parties</h2>
+  <p>The Extension communicates with the website you are viewing only to detect and fetch
+  media you asked for &mdash; the same connections your browser would make to play that media.
+  There is no third-party analytics SDK, ad network, or tracking provider embedded in the
+  Extension.</p>
+
+  <h2>8. Children&rsquo;s privacy</h2>
+  <p>The Extension is a general-purpose tool and is not directed at children. It collects no
+  personal information from anyone, including children.</p>
+
+  <h2>9. Your responsibility for content</h2>
+  <p>The Extension is a neutral tool for downloading media you have the right to access. You
+  are responsible for complying with each site&rsquo;s terms of service and with applicable
+  copyright and local law.</p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>If this policy changes, the &ldquo;Last updated&rdquo; date at the top will change. Material changes
+  will be reflected in the Extension&rsquo;s store listing.</p>
+
+  <h2>11. Contact</h2>
+  <p>Questions about this policy: <a href="mailto:ttactom@gmail.com">ttactom@gmail.com</a></p>
+
+  <footer>This policy reflects an extension that performs all processing locally and
+  operates no backend server that receives user data.</footer>
+</div>
+</body>
+</html>
