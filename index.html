@@ -94,6 +94,9 @@
       <tr><td>Your settings (quality, folders, language, etc.)</td><td>Remember preferences between sessions</td><td><code>chrome.storage.local</code> on your device</td></tr>
       <tr><td>Download history in the Library</td><td>Let you review and re-open past downloads</td><td>Local storage; clearable anytime</td></tr>
       <tr><td>Site cookies (when needed)</td><td>Some hosts require an authenticated session for a download you requested</td><td>Used only for that download to the host site; never sent to us</td></tr>
+      <tr><td>Public forum / discussion content</td><td>Show public discussion about the video you are currently viewing, inside the Extension&rsquo;s panel</td><td>Fetched from public forums by your browser; displayed locally; your forum identity is never collected or stored by us</td></tr>
+      <tr><td>Your blocklist (usernames / keywords you choose)</td><td>Hide posts you do not want to see in the feed</td><td>Local storage; optional cloud backup only after your explicit sign-in (OAuth) consent</td></tr>
+      <tr><td>Your taste signals (likes / dislikes you tap)</td><td>Personalize which media the feed recommends to you</td><td>Computed and stored locally on your device</td></tr>
     </tbody>
   </table>
 
@@ -124,34 +127,46 @@
   <p>A separate <strong>full build</strong> distributed outside the Chrome Web Store may offer broader site
   support under different manifest permissions. That build is not described by this policy URL.</p>
 
-  <h2>5. Data storage and retention</h2>
+  <h2>5. Discussion, community &amp; personalization features</h2>
+  <p>Some builds of the Extension offer, around the video you are watching, an in-panel view of
+  <strong>public discussion</strong> from third-party forums, an optional <strong>feed</strong> of public posts,
+  a user-controlled <strong>blocklist</strong>, and <strong>taste-based</strong> feed personalization. For all of these:</p>
+  <ul>
+    <li>Discussion and forum content shown is <strong>public</strong> and fetched by your browser; the Extension does
+      <strong>not</strong> post on your behalf without an action you take, and does <strong>not</strong> collect or store your forum identity.</li>
+    <li>Your blocklist and taste signals (likes/dislikes) are <strong>stored locally</strong>; any cloud backup is
+      <strong>optional</strong>, contains only your own settings, and runs only after your explicit sign-in (OAuth) consent.</li>
+    <li>None of this data is sold, shared, or used for any purpose beyond the feature you are using.</li>
+  </ul>
+
+  <h2>6. Data storage and retention</h2>
   <ul>
     <li>Settings, queue entries, and Library items remain on your device until you clear them (via in-extension controls, by uninstalling, or by clearing browser data).</li>
     <li>The Extension keeps <strong>no server-side copy</strong> because it operates no backend.</li>
   </ul>
 
-  <h2>6. Downloaded files</h2>
+  <h2>7. Downloaded files</h2>
   <p>Files you download are saved by your browser to a location you choose. The Extension does not upload,
   copy, or transmit them elsewhere.</p>
 
-  <h2>7. Third parties</h2>
+  <h2>8. Third parties</h2>
   <p>The Extension communicates with the website you are viewing only to detect and fetch media you asked
   for — the same connections your browser would make to play that media. There is no third-party analytics
   SDK, ad network, or tracking provider embedded in the Extension.</p>
 
-  <h2>8. Children's privacy</h2>
+  <h2>9. Children's privacy</h2>
   <p>The Extension is a general-purpose tool and is not directed at children. It collects no personal
   information from anyone, including children.</p>
 
-  <h2>9. Your responsibility for content</h2>
+  <h2>10. Your responsibility for content</h2>
   <p>The Extension is a neutral tool for downloading media you have the right to access. You are responsible
   for complying with each site's terms of service and with applicable copyright and local law.</p>
 
-  <h2>10. Changes to this policy</h2>
+  <h2>11. Changes to this policy</h2>
   <p>If this policy changes, the &ldquo;Last updated&rdquo; date at the top will change. Material changes
   will be reflected in the Extension's store listing.</p>
 
-  <h2 class="contact">11. Contact</h2>
+  <h2 class="contact">12. Contact</h2>
   <p>Questions about this policy: <a href="mailto:ttactom@gmail.com">ttactom@gmail.com</a></p>
 
   <footer>
